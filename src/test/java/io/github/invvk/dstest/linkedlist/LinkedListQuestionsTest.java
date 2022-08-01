@@ -5,9 +5,6 @@ import io.github.invvk.ds.linkedlist.singly.SNode;
 import io.github.invvk.ds.linkedlist.singly.SinglyLinkedList;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
