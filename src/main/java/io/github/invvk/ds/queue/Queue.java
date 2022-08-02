@@ -14,7 +14,7 @@ public class Queue<T> {
         return list.isEmpty();
     }
 
-    public void queue(T value) {
+    public void enqueue(T value) {
         this.list.insertToTail(value);
     }
 
