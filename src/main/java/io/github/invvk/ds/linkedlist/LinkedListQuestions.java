@@ -104,4 +104,23 @@ public class LinkedListQuestions {
         }
     }
 
+    /**
+     * Sort singly linked list
+     */
+    public static void sortAscending(SinglyLinkedList<Integer> linkedList) {
+        SNode<Integer> node = linkedList.getHead();
+        while (node != null) {
+            SNode<Integer> index = node.getNext();
+            while (index != null) {
+                if (node.getData() > index.getData()) {
+                    int temp = node.getData();
+                    node.setData(index.getData());
+                    index.setData(temp);
+                }
+                index = index.getNext();
+            }
+            node = node.getNext();
+        }
+    }
+
 }
