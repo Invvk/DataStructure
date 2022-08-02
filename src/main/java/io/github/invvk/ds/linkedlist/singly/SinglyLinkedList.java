@@ -93,8 +93,11 @@ public class SinglyLinkedList<T> implements ILinkedList<T, SNode<T>> {
         T data = tail.getData();
         if (head == tail)
             head = tail = null;
-        else
-            tail = getNodeAt(size() - 1);
+        else {
+            SNode<T> node = getNodeAt(size() - 1);
+            node.setNext(null);
+            tail = node;
+        }
         counter--;
         return data;
     }
