@@ -11,7 +11,7 @@ public class QueueTest {
     public void validateQueueMethod() {
         Queue<Integer> queue = new Queue<>();
         int expected = 1;
-        queue.queue(expected);
+        queue.enqueue(expected);
         assertEquals(expected, queue.top());
     }
 
@@ -19,7 +19,7 @@ public class QueueTest {
     public void validateDequeueMethod() {
         Queue<Integer> queue = new Queue<>();
         int expected = 1;
-        queue.queue(expected);
+        queue.enqueue(expected);
         assertEquals(expected, queue.dequeue());
     }
 
