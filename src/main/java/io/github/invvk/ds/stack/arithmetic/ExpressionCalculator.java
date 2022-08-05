@@ -34,7 +34,7 @@ public class ExpressionCalculator {
 
                 // get rid of '('
                 opstack.pop();
-            } else if (token == '*' || token == '/' || token == '+' || token == '-') {
+            } else if (token == '*' || token == '/' || token == '+' || token == '-' || token == '^') {
                 while (!opstack.isEmpty() && hasPrecedence(token, opstack.top()))
                     values.push(applyOperation(values.pop(), values.pop(), opstack.pop()));
                 opstack.push(token);
@@ -48,7 +48,7 @@ public class ExpressionCalculator {
     private static boolean hasPrecedence(char input1, char input2) {
         if (input2 == '(' || input2 == ')')
             return false;
-        return (input1 != '*' && input1 != '/') || (input2 != '+' && input2 != '-');
+        return (input1 != '*' && input1 != '/' && input1 != '^') || (input2 != '+' && input2 != '-');
     }
 
     private static int applyOperation(int y, int x, char operation) {
@@ -57,8 +57,13 @@ public class ExpressionCalculator {
             case '/' -> { return x / y; }
             case '+' -> { return x + y; }
             case '-' -> { return x - y; }
+            case '^' -> { return (int) Math.pow(x, y); }
             default -> throw new IllegalArgumentException(String.format("invalid operator '%c'", operation));
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(calculate("8+2^2"));
     }
 
 }
