@@ -62,8 +62,4 @@ public class ExpressionCalculator {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println(calculate("8+2^2"));
-    }
-
 }
