@@ -61,9 +61,4 @@ public class ExpressionCalculator {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println(calculate("8 + 2 * 3 + (2 - 1 / 1) * 9 * 1000"));
-        System.out.println(calculate("1+1*2"));
-    }
-
 }
