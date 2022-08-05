@@ -10,6 +10,10 @@ public class Stack<T> {
         list = new SinglyLinkedList<>();
     }
 
+    public Stack(T defaultValue) {
+        list = new SinglyLinkedList<>(defaultValue);
+    }
+
     public boolean isEmpty() {
         return list.isEmpty();
     }
