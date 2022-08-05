@@ -27,7 +27,7 @@ public class StackTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"'9*(5+4/2-1)*3',162", "'1+1',2", "'1+2*2+1',6", "'8 + 2 * 3 + (2 - 1 / 1) * 9 * 1000',9014"})
+    @CsvSource({"'9*(5+4/2-1)*3',162", "'1+1',2", "'1+2*2+1',6", "'8 + 2 * 3 + (2 - 1 / 1) * 9 * 1000',9014", "8+2^2+(2+1)^2,21"})
     public void validateArithmetic(String expression, int expectedResult) {
         int result = ExpressionCalculator.calculate(expression);
         assertEquals(expectedResult, result);
